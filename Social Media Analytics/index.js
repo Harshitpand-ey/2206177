@@ -4,11 +4,10 @@ const PORT = 3002;
 
 app.use(express.json());
 
-// Middleware to extract Bearer token
 const authMiddleware = require("./middlewares/authMiddleware");
 app.use(authMiddleware);
 
-// Routes
+
 const userRoutes = require("./routes/userRoutes");
 const postRoutes = require("./routes/postRoutes");
 
